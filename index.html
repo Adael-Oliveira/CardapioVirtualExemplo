@@ -1,0 +1,256 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .rest-wrap {
+    font-family: 'Lato', sans-serif;
+    background: #1a0f07;
+    color: #f0e6d3;
+    min-height: 600px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero {
+    position: relative;
+    padding: 48px 32px 40px;
+    text-align: center;
+    border-bottom: 1px solid rgba(212,160,80,0.25);
+    background: radial-gradient(ellipse at top center, #2e1a0e 0%, #1a0f07 70%);
+  }
+
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .ornament-line {
+    width: 48px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #d4a050);
+  }
+  .ornament-line.right {
+    background: linear-gradient(to left, transparent, #d4a050);
+  }
+
+  .ornament-diamond {
+    width: 6px;
+    height: 6px;
+    background: #d4a050;
+    transform: rotate(45deg);
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #f5dfa0;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .hero-sub {
+    font-size: 12px;
+    font-weight: 300;
+    color: #a08060;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .section {
+    padding: 28px 24px 12px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #d4a050;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .section-label::before,
+  .section-label::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 40px;
+    background: rgba(212,160,80,0.4);
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .card-grid.single {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,160,80,0.3);
+    border-radius: 2px;
+    color: #f0e6d3;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .btn:hover {
+    background: rgba(212,160,80,0.12);
+    border-color: rgba(212,160,80,0.7);
+  }
+
+  .btn.primary {
+    background: rgba(212,160,80,0.15);
+    border-color: rgba(212,160,80,0.6);
+    color: #f5dfa0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+
+  .btn.primary:hover {
+    background: rgba(212,160,80,0.3);
+  }
+
+  .btn i {
+    font-size: 18px;
+    color: #d4a050;
+  }
+
+  .divider {
+    height: 1px;
+    background: rgba(212,160,80,0.15);
+    margin: 8px 24px;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #a08060;
+    padding: 8px 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .info-row i {
+    font-size: 16px;
+    color: #d4a050;
+  }
+
+  .footer-ornament {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-ornament .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(212,160,80,0.4);
+  }
+  .footer-ornament .line-f {
+    height: 1px;
+    width: 60px;
+    background: rgba(212,160,80,0.25);
+  }
+</style>
+
+<div class="rest-wrap">
+  <div class="hero">
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+    <div class="hero-title">🍽 Restaurante Exemplo</div>
+    <div class="hero-sub">Bem-vindo à nossa mesa</div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Cardápio</div>
+    <div class="card-grid single">
+      <a class="btn primary" href="cardapio.pdf" download>
+        <i class="ti ti-file-download" aria-hidden="true"></i>
+        Baixar Cardápio PDF
+      </a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-label">Redes Sociais</div>
+    <div class="card-grid">
+      <a class="btn" href="https://instagram.com">
+        <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+        Instagram
+      </a>
+      <a class="btn" href="https://facebook.com">
+        <i class="ti ti-brand-facebook" aria-hidden="true"></i>
+        Facebook
+      </a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <div class="section-label">Contato</div>
+    <div class="card-grid single" style="margin-bottom:12px">
+      <a class="btn primary" href="https://wa.me/5511999999999">
+        <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+        Falar no WhatsApp
+      </a>
+    </div>
+    <div class="info-row">
+      <i class="ti ti-map-pin" aria-hidden="true"></i>
+      Rua Exemplo, 123
+    </div>
+    <div class="info-row">
+      <i class="ti ti-phone" aria-hidden="true"></i>
+      (19) 99999-9999
+    </div>
+  </div>
+
+  <div class="footer-ornament">
+    <div class="line-f"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="line-f"></div>
+  </div>
+</div>
